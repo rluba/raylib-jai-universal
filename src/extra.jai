@@ -25,7 +25,7 @@ GetRayCollisionCylinder :: (ray : Ray, a : Vector3, b : Vector3, ra : float) -> 
 	// body
 	y := baoc + t * bard;
 	if y > 0 && y < baba {
-		return .{ 
+		return .{
 			true,
 			t,
 			ro + t * rd,
@@ -106,7 +106,7 @@ RLGL_Data :: struct {
         texCompETC2     : bool;
         texCompPVRT     : bool;
         texCompASTC     : bool;
-        texMirrorClamp  : bool;                
+        texMirrorClamp  : bool;
         texAnisoFilter  : bool;
         computeShader   : bool;
         ssbo            : bool;
@@ -130,7 +130,7 @@ update_camera_free_move :: (camera : *Camera, linear_speed_factor := 1., angular
 
         CameraMoveRight(camera, speed * x * dt, true);
         CameraMoveUp(camera, speed * y * dt);
-        CameraMoveForward(camera, speed * z * dt, true);        
+        CameraMoveForward(camera, speed * z * dt, true);
     }
     {
         speed := .0025 * angular_speed_factor;
@@ -140,7 +140,7 @@ update_camera_free_move :: (camera : *Camera, linear_speed_factor := 1., angular
     }
 }
 
-global_context_for_raylib : *Context;
+global_context_for_raylib : *#Context;
 
 #scope_file
 
